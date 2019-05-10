@@ -1,7 +1,7 @@
+# Same as official Couchbase image except that a different uid is used
 FROM ubuntu:14.04
 
-MAINTAINER Couchbase Docker Team <docker@couchbase.com>
-
+MAINTAINER ACA Support <support@acaprojets.com>
 # Install dependencies:
 #  runit: for container process management
 #  wget: for downloading .deb
@@ -26,9 +26,8 @@ ARG CB_SHA256=f1629c70ea9a13f88ddf70923dcfb6e05f9840a1bfee0b7150a80c930d25917f
 
 ENV PATH=$PATH:/opt/couchbase/bin:/opt/couchbase/bin/tools:/opt/couchbase/bin/install
 
-# Create Couchbase user with UID 1000 (necessary to match default
-# boot2docker UID)
-RUN groupadd -g 1000 couchbase && useradd couchbase -u 1000 -g couchbase -M
+# Create Couchbase user with UID 8091
+RUN groupadd -g 8091 couchbase && useradd couchbase -u 8091 -g couchbase -M
 
 # Install couchbase
 RUN export INSTALL_DONT_START_SERVER=1 && \
