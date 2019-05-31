@@ -14,7 +14,7 @@ MAINTAINER ACA Support <support@acaprojets.com>
 #  net-tools: ifconfig, arp, netstat
 #  numactl: numactl
 RUN apt-get update && \
-    apt-get install -yq runit wget chrpath tzdata \
+    apt-get install -yq runit wget chrpath tzdata jq \
     lsof lshw sysstat net-tools numactl python-httplib2 && \
     apt-get autoremove && apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
