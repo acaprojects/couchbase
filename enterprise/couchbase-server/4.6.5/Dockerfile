@@ -1,5 +1,5 @@
 # Same as official Couchbase image except that a different uid is used
-FROM ubuntu:14.04
+FROM ubuntu:20.04
 
 MAINTAINER ACA Support <support@acaprojets.com>
 # Install dependencies:
